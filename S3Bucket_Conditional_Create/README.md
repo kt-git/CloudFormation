@@ -1,5 +1,5 @@
-<U><B>S3Bucket Conditional Creation Implementor's Notes:</B></U>
-<BR>
+<U><B>S3Bucket Conditional Creation Implementor's Notes</B></U>
+<BR><BR>
 To use this, you can take two paths which should work:
 <BR>
 1) Implement (a likely slightly altered derivative of) this template as a Sub-Stack in a Nested-Stack model.

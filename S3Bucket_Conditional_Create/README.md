@@ -8,7 +8,7 @@ This is a reference implementation of how to do conditional S3 Bucket re-use or 
 <LI><B>Deletion:</B> Support purging all contents (both versioned and non-versioned) of an S3 Bucket at the time of Deletion, so we can cleanly dispose of any buckets we create in our template at the time of Stack Creation, even if they have contents added to them later.  In normal scenarios using AWS::S3::Bucket, this causes a FAILURE on the S3 Bucket resource upon Stack Deletion, because an S3 Bucket Delete API call will only succeed on an EMPTY bucket.  We make it possible to have both clean Stack Deletes when your use case is that the bucket is desired to go away at Stack Deletion time, data and all (perfect for our CodePipeline use case.)
 <BR><BR>
 <LI><B>Updates:</B> If the bucket name is changed between updates in the CloudFormation template, support deleting the old bucket name and creating the bucket name following the same guidelines as above.  This doesn't move the data around, but for use cases where the data is easily re-populated, this is a suitable, and likely desireable, implementation choice (again, perfect for our CodePipeline use case.)
-<BR><BR>
+</UL><BR><BR>
 <U><B>Implementor's Notes</B></U>
 <BR><BR>
 To use this, you can take two paths which should work:
